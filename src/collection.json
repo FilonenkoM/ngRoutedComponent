@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "routed-component": {
+      "description": "A schematics for creating schematics already equipped with routing.",
+      "factory": "./routed-component/index#routedComponent",
+      "schema": "./schema.json"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsGenerateRoutedComponent",
+    "title": "Routed Component Schema",
+    "type": "object",
+    "properties": {
+            "name": {
+              "description": "The name of the service.",
+              "type": "string",
+              "$default": {
+                "$source": "argv",
+                "index": 0
+              },
+              "x-prompt": "What is the name of your toued component?"
+            },
+            "path": {
+              "type": "string",
+              "format": "path",
+              "description": "The path to create the service.",
+              "visible": false
+            },
+            "project": {
+              "type": "string",
+              "description": "The name of the project.",
+              "$default": {
+                "$source": "projectName"
+              }
+            }
+    },
+    "required": [
+      "name"
+    ]
+}
